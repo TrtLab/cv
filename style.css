@@ -1,0 +1,318 @@
+@font-face{
+    font-family: "Jack";
+    src: url('fonts/jack.TTF');
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Jack" !important;
+}
+
+
+/* Classes globales */
+.bg-grey{
+    background-color: rgb(240, 240, 240);
+}
+
+.m-100{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.p-100{
+    padding: 100px;
+}
+
+/* Header */
+
+#titre{
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(168, 0, 0);
+    color: white;
+}
+
+#titre h1{
+    margin-bottom: 20px;
+}
+
+
+/* Bloc "à propos" */
+#apropos-wrapper{
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+
+#apropos-wrapper img{
+    width: 450px;
+}
+
+#apropos-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+
+/* Bloc compétences */
+.skill-list{
+    display: flex;
+    justify-content: center;
+}
+
+.skill{
+    margin-left: 100px;
+}
+
+.skills{
+    padding: 0;
+    width: 60%;
+    margin: auto;
+}
+
+.skills li{
+    display: flex;
+}
+
+.skill-img{
+    width: 60%;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+.skill-img:hover{
+    transform: rotate(20deg);
+}
+
+small{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* Réalisation */
+
+#realisations img{
+    width: 800px;
+}
+
+#realisations{
+    background: url('img/loupe.png') no-repeat center;
+    background-size: 50px;
+}
+
+#realisations a{
+    display: flex;
+    justify-content: center;
+    transition: ease-in-out 0.5s;
+}
+
+#realisations a:hover{
+    opacity: 0.5;
+}
+
+/* Expérience */
+
+.exp{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.date{
+    background-color: brown;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    height: 75px;
+    width: 170px;
+}
+
+#conception, #developpement{
+    display: flex;
+}
+
+.exp-skills span{
+    font-size: 15px;;
+}
+
+/* Interets */
+#interets{
+    margin-bottom: 0;
+}
+.interets{
+    display: flex;
+    justify-content: center;
+}
+
+.interet img{
+    width: 40%;
+}
+
+/* Footer & contact */
+
+footer{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    padding-top: 100px;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-info{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: white;
+}
+
+.contact-img{
+    width: 40%;
+    margin: auto;
+    transition: left 1s, transform 1s;
+}
+
+.contact-img:hover{
+    transform: translateX(-25px)
+}
+
+/* Reseaux */
+#reseaux{
+    text-align: center;
+    background-color: rgb(168, 0, 0);
+}
+#reseaux a img{
+    width: 50px;
+    margin: 20px;
+    transition: top 1s, transform 1s;
+}
+
+#reseaux a img:hover{
+    transform: translateY(-10px);
+}
+
+
+
+/* Apparition au défilement */
+
+.reveal, .reveal [class*="reveal-"]{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible, .reveal-visible [class*="reveal-"]{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.reveal-visible .reveal-2{
+    transition-delay: 0.2s;
+}
+
+.reveal-visible .reveal-3{
+    transition-delay: 0.4s;
+}
+
+
+
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 800px){   
+
+    #apropos-wrapper{
+        display: block;
+        text-align: center;
+    }
+    #apropos-wrapper img{
+        width: 60%;
+    }
+    #apropos-content{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .skill-list{
+        display: block;
+        text-align: center;
+    }
+
+    .skill{
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    #realisations img{
+        width: 80%;
+    }
+
+    .date{
+        width: 95px;
+        height: 135px;
+    }
+
+    #conception, #developpement{
+        display: block;
+    }
+
+    #conception p, #developpement p{
+        margin-bottom: 0;
+    }
+
+    .contact-info{
+        margin: auto;
+    }
+
+    .contact-info img{
+        width: 30%;
+    }
+
+    footer{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    [class*='p-100']{
+        padding: 25px
+    }   
+
+    #titre{
+        padding: 25px;
+    }
+
+    #realisations{
+        background: none;
+    }
+
+    .interets{
+        display: block;
+    }
+
+    #contact{
+        display: block;
+        margin-top: 50px;
+    }
+}
+
